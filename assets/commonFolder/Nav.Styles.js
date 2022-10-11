@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     container: {
         display: 'flex',
-        height: '10.2%'
+        height: '10.2%'        
     },
     navigation: {
         display: 'flex',
@@ -22,7 +22,7 @@ const style = StyleSheet.create({
         shadowRadius: 16.00,
         elevation: 24,
         borderTopStartRadius: 75,
-        borderTopEndRadius: 75,
+        borderTopEndRadius: 75
     },
     //Here I'm going to create the top of our awesome navbar using some css tricks :)
     triangle: {

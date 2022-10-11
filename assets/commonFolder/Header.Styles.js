@@ -13,7 +13,8 @@ const style = StyleSheet.create({
         fontFamily: 'LexendGiga_800ExtraBold',
         fontSize: 16,
         lineHeight: 20,
-        paddingLeft: 12
+        paddingLeft: 12,
+        color: '#4E4E4E'
     }
 });
 
