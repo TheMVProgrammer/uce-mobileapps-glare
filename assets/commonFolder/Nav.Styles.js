@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     container: {
         display: 'flex',
-        height: '10.2%'        
+        height: '8%'        
     },
     navigation: {
         display: 'flex',
@@ -35,7 +35,7 @@ const style = StyleSheet.create({
         borderStyle: 'solid',
         backgroundColor: '#fff',
         position: 'absolute',
-        top: -7,
+        top: -10,
 
         //Simulating the box-shadow property haha
         shadowOffset: {
@@ -48,44 +48,44 @@ const style = StyleSheet.create({
     },
     upArrowLeft: {          
         transform: [{
-            rotate: '-6deg'
+            rotate: '-7deg'
         }],
         marginLeft: 63
     }, 
     upArrowRight: {              
         transform: [{
-            rotate: '6deg'
+            rotate: '7deg'
         }],
         marginLeft: 198.5
     },
     addButton: {
         backgroundColor: '#4969DB',
         borderRadius: 50,
-        marginTop: -35
+        marginTop: -33
     },
     coverUnwantedShadow: {
         position: 'absolute'
     },
     //Here I'm going to cover the middle shadow between the triangle and the bottom shape  
     arrowUS: {
-        width: 120,
+        width: 130,
         height: 50,
         borderStyle: 'solid',
         backgroundColor: '#fff',
         position: 'absolute',
-        top: -41
+        top: -35
     },
     upArrowLeftUS: {          
         transform: [{
-            rotate: '-4deg'
+            rotate: '-6deg'
         }],
-        marginLeft: 37
+        marginLeft: 29
     }, 
     upArrowRightUS: {              
         transform: [{
-            rotate: '4deg'
+            rotate: '6deg'
         }],
-        marginLeft: 189
+        marginLeft: 188
     }
 });
 

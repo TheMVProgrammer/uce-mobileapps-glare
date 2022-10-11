@@ -48,7 +48,8 @@ const style = StyleSheet.create({
         fontSize: 11,
         lineHeight: 13.75,
         fontFamily: 'LexendGiga_600SemiBold',
-        color: '#4E4E4E'
+        color: '#4E4E4E',
+        paddingTop: 4 
     },
     welcome_section: {
         display: 'flex',

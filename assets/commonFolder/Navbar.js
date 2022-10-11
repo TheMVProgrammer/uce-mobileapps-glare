@@ -23,7 +23,7 @@ function NavBar() {
                 </View>   
                 <HomeIcon style = {style.homeButton} width={30} height={30}/>
                 <Category width={30} height={30}/>
-                <AddButton style = {style.addButton}/>
+                <AddButton style = {style.addButton} width={73} height={73}/>
                 <ImgIcon width={30} height={30}/>
                 <Settings width={30} height={30}/>
             </View>
