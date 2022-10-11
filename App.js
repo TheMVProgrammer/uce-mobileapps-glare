@@ -4,6 +4,7 @@ import Home from './assets/home/Home';
 import AlbumList from './assets/albumList/AlbumList.js';
 import AlbumView from './assets/albumView/AlbumView.js';
 import OpenPhotoView from './assets/openPhotoView/OpenPhotoView.js';
+import OpenPhotoView2 from './assets/openPhotoView2/OpenPhotoView2.js';
 import {
   useFonts,
   LexendGiga_100Thin,
@@ -40,7 +41,8 @@ export default function App() {
       {/* <Home/> */}
       {/* <AlbumList/> */}
       {/* <AlbumView/> */}
-      <OpenPhotoView/>
+      {/* <OpenPhotoView/> */}
+      <OpenPhotoView2/>
       <StatusBar style="auto" />
     </View>
   );
