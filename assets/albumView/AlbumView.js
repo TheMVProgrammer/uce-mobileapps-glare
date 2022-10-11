@@ -1,13 +1,12 @@
 import { View, Text, ScrollView } from "react-native";
-import style from "./Home.Styles";
-import Logo from "../commonFolder/Logo";
+import style from "./AlbumView.Styles";
 import NavBar from "../commonFolder/Navbar";
+import Header from "../commonFolder/Header";
 
-
-function Home() {
+function AlbumView() {
     return (
         <View style = {style.container}>
-            <Logo/>
+            <Header/>
             <ScrollView style = {style.main_content}>
                 
             </ScrollView>
@@ -16,4 +15,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default AlbumView;
