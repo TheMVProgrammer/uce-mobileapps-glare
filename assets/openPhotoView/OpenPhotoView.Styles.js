@@ -7,8 +7,9 @@ const style = StyleSheet.create({
     },
     main_content: {
         flex: 1,
-        padding: 35
-    }    
+        padding: 35,
+        paddingTop: 0
+    }
 });
 
 export default style;

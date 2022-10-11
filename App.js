@@ -39,8 +39,8 @@ export default function App() {
     <View style = {styles.container}>
       {/* <Home/> */}
       {/* <AlbumList/> */}
-      <AlbumView/>
-      {/* <OpenPhotoView/> */}
+      {/* <AlbumView/> */}
+      <OpenPhotoView/>
       <StatusBar style="auto" />
     </View>
   );
