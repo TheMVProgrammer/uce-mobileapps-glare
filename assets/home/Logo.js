@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import LogoSVG from '../Logo.svg'
-import style from "./Home.Styles";
+import style from "./Logo.Styles";
 
 function Logo() {
     return (

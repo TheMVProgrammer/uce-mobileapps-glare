@@ -8,18 +8,6 @@ const style = StyleSheet.create({
     main_content: {
         flex: 1,
         padding: 35
-    },
-    navigation: {
-        display: 'flex',
-        height: '10.2%',
-        backgroundColor: '#0ff',
-        
-    }, 
-    header: {
-        paddingTop: 32,
-        paddingRight: 8,
-        display: 'flex',      
-        alignItems: 'flex-end'
     }
 });
 
