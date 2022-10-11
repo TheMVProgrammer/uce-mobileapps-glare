@@ -6,9 +6,28 @@ const style = StyleSheet.create({
         width: '100%'
     },
     main_content: {
-        flex: 1,
-        padding: 35
-    }    
+        display: 'flex',
+        padding: 35,
+        paddingTop: 0,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    album_first_item: {
+        alignSelf: 'flex-start',
+        height: 0
+    },
+    album_third_item: {
+        alignSelf: 'flex-start',
+        marginTop: -34,
+        marginBottom: 17
+    }, 
+    album_fourth_item: {
+        alignSelf: 'flex-end',
+        marginBottom: 17
+    }
+
 });
 
 export default style;
