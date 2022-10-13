@@ -42,7 +42,7 @@ export default function App() {
       {/* <AlbumList/> */}
       {/* <AlbumView/> */}
       {/* <OpenPhotoView/> */}
-      <OpenPhotoView2/>
+      <OpenPhotoView2/> 
       <StatusBar style="auto" />
     </View>
   );
