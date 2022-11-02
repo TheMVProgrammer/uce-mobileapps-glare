@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import Home from './assets/home/Home';
 import AlbumList from './assets/albumList/AlbumList.js';
 import AlbumView from './assets/albumView/AlbumView.js';
@@ -38,11 +39,11 @@ export default function App() {
 
   return (
     <View style = {styles.container}>
-      {/* <Home/> */}
+      <Home/>
       {/* <AlbumList/> */}
       {/* <AlbumView/> */}
       {/* <OpenPhotoView/> */}
-      <OpenPhotoView2/> 
+      {/* <OpenPhotoView2/>  */}
       <StatusBar style="auto" />
     </View>
   );
