@@ -4,10 +4,10 @@ import NavBar from "../commonFolder/Navbar";
 import Header from "../commonFolder/Header";
 import Img2 from "./LoadImages";
 
-function OpenPhotoView2() {
+function OpenPhotoView2({navigation}) {
     return (
         <View style = {style.container}>
-            <Header/>
+            <Header navigation={navigation}/>
             <View style = {style.main_content}>
                 <Img2/>
                 <View style = {style.modal}>
@@ -16,7 +16,7 @@ function OpenPhotoView2() {
                     <Text style = {style.modal_desc}>Archivos</Text>
                 </View>
             </View>
-            <NavBar/>
+            <NavBar navigation={navigation}/>
         </View>
     );
 }

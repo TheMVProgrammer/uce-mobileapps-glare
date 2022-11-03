@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import style from "./AlbumList.Styles";
 import Logo from "../commonFolder/Logo";
 import NavBar from "../commonFolder/Navbar";
@@ -16,7 +16,7 @@ import {
     PreviewPhoto8
 } from "./LoadImages"
 
-function AlbumList() {
+function AlbumList({navigation}) {
     return (
         <View style = {style.container}>
             <Logo/>
@@ -29,8 +29,14 @@ function AlbumList() {
                     <View style = {style.a_info}>
                         <RectangleIcon/>
                         <View>
-                            <Text style = {style.a_title}>Instagram Ciudad</Text>
-                            <Text style = {style.a_desc}>Última modificación - Hace 1 hr</Text>
+                            <Text 
+                                style = {style.a_title}
+                                onPress={() => navigation.navigate("AlbumView")}
+                            >Instagram Ciudad</Text>
+                            <Text 
+                                style = {style.a_desc}
+                                onPress={() => navigation.navigate("AlbumView")}
+                            >Última modificación - Hace 1 hr</Text>
                         </View>
                     </View>
                     <View style = {style.album_prev}>
@@ -49,8 +55,14 @@ function AlbumList() {
                     <View style = {style.a_info}>
                         <RectangleIcon/>
                         <View>
-                            <Text style = {style.a_title}>Instagram Playa</Text>
-                            <Text style = {style.a_desc}>Última modificación - Hace 1 hr</Text>
+                            <Text 
+                                style = {style.a_title}
+                                onPress={() => navigation.navigate("AlbumView")}    
+                                >Instagram Playa</Text>
+                            <Text 
+                                style = {style.a_desc}
+                                onPress={() => navigation.navigate("AlbumView")}
+                                >Última modificación - Hace 1 hr</Text>
                         </View>
                     </View>
                     <View style = {style.album_prev}>
@@ -66,7 +78,7 @@ function AlbumList() {
                     </View>
                 </View>
             </ScrollView>
-            <NavBar/>
+            <NavBar navigation={navigation}/>
         </View>
     );
 }

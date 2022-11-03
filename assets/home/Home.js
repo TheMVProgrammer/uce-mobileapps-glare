@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text, ScrollView } from "react-native";
 import style from "./Home.Styles";
 import Logo from "../commonFolder/Logo";
@@ -17,7 +18,7 @@ import {
     Welcome
 } from "./LoadImages";
 
-function Home() {
+function Home({ navigation }) {
     return (
         <View style = {style.container}>
             <Logo/>
@@ -52,7 +53,7 @@ function Home() {
                     <Welcome/>    
                 </View>
             </ScrollView>
-            <NavBar/>
+            <NavBar navigation={navigation}/>
         </View>
     );
 }

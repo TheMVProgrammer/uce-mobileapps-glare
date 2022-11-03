@@ -11,21 +11,21 @@ import {
     PhotoAlbum6,
  } from "./LoadImages";
 
-function AlbumView() {
+function AlbumView({navigation}) {
     return (
         <View style = {style.container}>
-            <Header/>
+            <Header navigation={navigation}/>
             <ScrollView>
                 <View style = {style.main_content}>
                     <PhotoAlbum1/>
                     <PhotoAlbum2/>
                     <PhotoAlbum3/>
-                    <PhotoAlbum4/>
+                    <PhotoAlbum4 navigation={navigation}/>
                     <PhotoAlbum5/>
                     <PhotoAlbum6/>
                 </View>
             </ScrollView>
-            <NavBar/>
+            <NavBar navigation={navigation}/>
         </View>
     );
 }

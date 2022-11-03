@@ -31,10 +31,10 @@ export function PhotoAlbum3() {
     )
 }
 
-export function PhotoAlbum4() {
+export function PhotoAlbum4({navigation}) {
     return (
         <View style = {style.album_fourth_item}>
-            <PhotoAlbum4SVG/>
+            <PhotoAlbum4SVG onPress={() => navigation.navigate("OpenPhotoView")}/>
         </View>
     )
 }

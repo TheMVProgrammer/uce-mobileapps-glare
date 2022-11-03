@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './assets/home/Home';
 import AlbumList from './assets/albumList/AlbumList.js';
 import AlbumView from './assets/albumView/AlbumView.js';
@@ -18,6 +19,8 @@ import {
   LexendGiga_800ExtraBold,
   LexendGiga_900Black,
 } from '@expo-google-fonts/lexend-giga';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
 
@@ -38,14 +41,45 @@ export default function App() {
   }
 
   return (
-    <View style = {styles.container}>
-      <Home/>
-      {/* <AlbumList/> */}
-      {/* <AlbumView/> */}
-      {/* <OpenPhotoView/> */}
-      {/* <OpenPhotoView2/>  */}
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{headerShown: false}} /* Puse esto porque se ve feo con el header :3 */
+      > 
+        <Stack.Screen 
+          name="Home" 
+          component={Home} 
+          options={{ title: "Welcome" }}  
+        />
+        <Stack.Screen 
+          name="AlbumList" 
+          component={AlbumList} 
+          options={{ title: "Albumes" }}
+          />
+        <Stack.Screen 
+          name="AlbumView" 
+          component={AlbumView} 
+          options={{ title: "Album" }}
+          />
+        <Stack.Screen 
+          name="OpenPhotoView" 
+          component={OpenPhotoView} 
+          options={{ title: "Detalle" }}
+          />
+        <Stack.Screen 
+          name="OpenPhotoView2" 
+          component={OpenPhotoView2} 
+          options={{ title: "Detalle + modal" }}
+          />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // <View style = {styles.container}>
+    //   <Home/>
+    //   {/* <AlbumList/> */}
+    //   {/* <AlbumView/> */}
+    //   {/* <OpenPhotoView/> */}
+    //   {/* <OpenPhotoView2/>  */}
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 

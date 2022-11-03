@@ -1,3 +1,4 @@
+import React from "react";
 import { View } from 'react-native';
 import style from "./Nav.Styles";
 import HomeIcon from "../svgFiles/navBar/Vector-1.svg";
@@ -6,7 +7,7 @@ import AddButton from "../svgFiles/navBar/AddButton.svg";
 import ImgIcon from "../svgFiles/navBar/Vector-2.svg";
 import Settings from "../svgFiles/navBar/Settings.svg";
 
-function NavBar() {
+function NavBar({navigation}) {
     return (
         <View style = {style.container}>   
         {/* Navbar top */}
@@ -21,11 +22,32 @@ function NavBar() {
                     <View style={[style.upArrowLeftUS, style.arrowUS]}></View> 
                     <View style={{...style.upArrowRightUS, ...style.arrowUS}}></View> 
                 </View>   
-                <HomeIcon style = {style.homeButton} width={30} height={30}/>
-                <Category width={30} height={30}/>
-                <AddButton style = {style.addButton} width={73} height={73}/>
-                <ImgIcon width={30} height={30}/>
-                <Settings width={30} height={30}/>
+                <HomeIcon 
+                    style = {style.homeButton} 
+                    width={30} height={30}
+                    onPress={() => navigation.navigate("Home")}
+                />
+                <Category 
+                    width={30} 
+                    height={30}
+                    onPress={() => navigation.navigate("AlbumList")}
+                    />
+                <AddButton 
+                    style = {style.addButton} 
+                    width={73} 
+                    height={73}
+                    onPress={() => navigation.navigate("OpenPhotoView2")}                    
+                    />
+                <ImgIcon 
+                    width={30} 
+                    height={30}
+                    /*Dejar vacío por ahora*/
+                    />
+                <Settings 
+                    width={30} 
+                    height={30}
+                    /*Dejar vacío por ahora*/
+                    />
             </View>
         </View>
     )

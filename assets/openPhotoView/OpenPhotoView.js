@@ -4,14 +4,14 @@ import NavBar from "../commonFolder/Navbar";
 import Header from "../commonFolder/Header";
 import PhotoAlbum4Large from "./LoadImages";
 
-function OpenPhotoView() {
+function OpenPhotoView({navigation}) {
     return (
         <View style = {style.container}>
-            <Header/>
+            <Header navigation={navigation}/>
             <View style = {style.main_content}>
                 <PhotoAlbum4Large/>
             </View>
-            <NavBar/>
+            <NavBar navigation={navigation}/>
         </View>
     );
 }
