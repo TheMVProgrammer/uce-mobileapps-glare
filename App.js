@@ -19,6 +19,7 @@ import {
   LexendGiga_800ExtraBold,
   LexendGiga_900Black,
 } from '@expo-google-fonts/lexend-giga';
+import {ProgressBarComponent, progressProps} from "./assets/commonFolder/ProgressBarComponent";
 
 const Stack = createNativeStackNavigator();
 
@@ -71,6 +72,7 @@ export default function App() {
           options={{ title: "Detalle + modal" }}
           />
       </Stack.Navigator>
+      <ProgressBarComponent {...progressProps} progress={0.3}/>
     </NavigationContainer>
     // <View style = {styles.container}>
     //   <Home/>

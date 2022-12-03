@@ -1,0 +1,1 @@
+export {ProgressViewIOS as ProgressBarComponent} from 'react-native';

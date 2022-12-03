@@ -9,6 +9,7 @@ import PhotoAlbum6SVG from '../svgFiles/detalleAlbum/photoAlbum6.svg';
 
 export function PhotoAlbum1() {
     return (
+        
         <View style = {style.album_first_item}>
             <PhotoAlbum1SVG/>
         </View>
@@ -24,7 +25,7 @@ export function PhotoAlbum2() {
 }
 
 export function PhotoAlbum3() {
-    return (
+    return (        
         <View style = {style.album_third_item}>
             <PhotoAlbum3SVG/>
         </View>
@@ -33,8 +34,10 @@ export function PhotoAlbum3() {
 
 export function PhotoAlbum4({navigation}) {
     return (
+        
         <View style = {style.album_fourth_item}>
-            <PhotoAlbum4SVG onPress={() => navigation.navigate("OpenPhotoView")}/>
+        {/* onPress={() => navigation.navigate("OpenPhotoView")} */}
+            <PhotoAlbum4SVG/>
         </View>
     )
 }
@@ -42,7 +45,7 @@ export function PhotoAlbum4({navigation}) {
 export function PhotoAlbum5() {
     return (
         <View>
-            <PhotoAlbum5SVG/>
+            <PhotoAlbum5SVG style = {style.album_fith_item}/>
         </View>
     )
 }
