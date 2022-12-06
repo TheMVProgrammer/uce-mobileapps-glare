@@ -7,6 +7,7 @@ import AlbumList from './assets/albumList/AlbumList.js';
 import AlbumView from './assets/albumView/AlbumView.js';
 import OpenPhotoView from './assets/openPhotoView/OpenPhotoView.js';
 import OpenPhotoView2 from './assets/openPhotoView2/OpenPhotoView2.js';
+import CardImage from './components/CardImage';
 import {
   useFonts,
   LexendGiga_100Thin,
@@ -61,6 +62,11 @@ export default function App() {
           component={AlbumView} 
           options={{ title: "Album" }}
           />
+        {/* <Stack.Screen 
+          name="CardImage" 
+          component={CardImage} 
+          options={{ title: "Album" }}
+          /> */}
         <Stack.Screen 
           name="OpenPhotoView" 
           component={OpenPhotoView} 
@@ -72,16 +78,7 @@ export default function App() {
           options={{ title: "Detalle + modal" }}
           />
       </Stack.Navigator>
-      <ProgressBarComponent {...progressProps} progress={0.3}/>
     </NavigationContainer>
-    // <View style = {styles.container}>
-    //   <Home/>
-    //   {/* <AlbumList/> */}
-    //   {/* <AlbumView/> */}
-    //   {/* <OpenPhotoView/> */}
-    //   {/* <OpenPhotoView2/>  */}
-    //   <StatusBar style="auto" />
-    // </View>
   );
 }
 

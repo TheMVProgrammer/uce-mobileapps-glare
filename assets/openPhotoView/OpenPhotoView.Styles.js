@@ -9,6 +9,9 @@ const style = StyleSheet.create({
         flex: 1,
         padding: 35,
         paddingTop: 0
+    },
+    image: {
+        borderRadius: 15
     }
 });
 
