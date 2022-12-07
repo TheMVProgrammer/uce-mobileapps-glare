@@ -13,7 +13,7 @@ const CardImage = ({ image }) => {
     >
       <Image
         source={{
-            uri:image.src.large 
+            uri:image.src.small 
               ? image.src.large
               : "https://cadenaser.com/resizer/LOg8G6ZOUs27cnp7d5XWPwN0aWc=/1200x900/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/VUXJ4NGPPJIGVPKH37DJM5MCOI.jpg"
         }}

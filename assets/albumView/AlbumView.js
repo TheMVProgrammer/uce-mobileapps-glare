@@ -41,8 +41,6 @@ import { useEffect, useState } from "react";
 //     }
 //   ];
 
-
-
 function AlbumView({navigation}) {
 
   const [photos, setPhotos] = useState([])

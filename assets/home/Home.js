@@ -1,5 +1,7 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, Image } from "react-native";
+import { useState, useEffect } from "react";
+import { getImages } from "../../api/pexels";
 import style from "./Home.Styles";
 import Logo from "../commonFolder/Logo";
 import NavBar from "../commonFolder/Navbar";
@@ -19,6 +21,18 @@ import {
 } from "./LoadImages";
 
 function Home({ navigation }) {
+
+    const [photos, setPhotos] = useState([])
+
+    const loadImages = async () =>  {
+        const res = await getImages();
+        setPhotos(res.data.photos);
+    }
+
+    useEffect(() => {
+        loadImages();
+    }, [])
+
     return (
         <View style = {style.container}>
             <Logo/>
@@ -26,10 +40,22 @@ function Home({ navigation }) {
                 <View style = {style.section}>
                     <Text style = {style.text}>Álbumes recientes</Text>
                     <View style = {style.section_content}>
-                        <RecentAlbum1/>
-                        <RecentAlbum2/>
-                        <RecentAlbum3/>
-                        <RecentAlbum4/>
+                        <Image
+                            source={{uri: photos[1].src.small}}
+                            style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
+                        />
+                        <Image
+                            source={{uri: photos[2].src.small}}
+                            style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
+                        />
+                        <Image
+                            source={{uri: photos[3].src.small}}
+                            style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
+                        />
+                        <Image
+                            source={{uri: photos[4].src.small}}
+                            style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
+                        />
                     </View>
                 </View>
                 <View style = {style.section}>
