@@ -44,6 +44,9 @@ const style = StyleSheet.create({
         fontSize: 16,
         lineHeight: 20,
         color: '#4e4e4e'
+    }, 
+    image: {
+        borderRadius: 15
     }
 });
 

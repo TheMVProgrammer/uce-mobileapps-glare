@@ -39,24 +39,26 @@ function Home({ navigation }) {
             <ScrollView style = {style.main_content}>
                 <View style = {style.section}>
                     <Text style = {style.text}>Álbumes recientes</Text>
-                    <View style = {style.section_content}>
+                    {photos.length != 0 && 
+                        <View style = {style.section_content}>
                         <Image
-                            source={{uri: photos[1].src.small}}
+                            source={{uri: photos[1].src.large}}
                             style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
                         />
                         <Image
-                            source={{uri: photos[2].src.small}}
+                            source={{uri: photos[2].src.large}}
                             style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
                         />
                         <Image
-                            source={{uri: photos[3].src.small}}
+                            source={{uri: photos[3].src.large}}
                             style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
                         />
                         <Image
-                            source={{uri: photos[4].src.small}}
+                            source={{uri: photos[4].src.large}}
                             style={{height: 65, width: 65, opacity: 0.6, backgroundColor: '#717f91', borderRadius: 15}}
                         />
                     </View>
+                    }                     
                 </View>
                 <View style = {style.section}>
                     <Text style = {style.text}>Etiquetas</Text>

@@ -1,4 +1,6 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native";
+import { useState, useEffect } from "react";
+import { getImages } from "../../api/pexels";
 import style from "./AlbumList.Styles";
 import Logo from "../commonFolder/Logo";
 import NavBar from "../commonFolder/Navbar";
@@ -17,6 +19,18 @@ import {
 } from "./LoadImages"
 
 function AlbumList({navigation}) {
+
+    const [photos, setPhotos] = useState([])
+
+    const loadImages = async () =>  {
+        const res = await getImages();
+        setPhotos(res.data.photos);
+    }
+
+    useEffect(() => {
+        loadImages();
+    }, [])
+
     return (
         <View style = {style.container}>
             <Logo/>
@@ -39,17 +53,33 @@ function AlbumList({navigation}) {
                             >Última modificación - Hace 1 hr</Text>
                         </View>
                     </View>
-                    <View style = {style.album_prev}>
-                        <CoverAlbum1 style = {style.main_photo}>
-                            
-                        </CoverAlbum1>
+                    {
+                        photos.length != 0 &&
+                        
+                        <View style = {style.album_prev}>
+                        <Image
+                            source={{uri: photos[5].src.large}}
+                            style={{height: 160, width: 160, borderRadius: 15}}
+                        />
                         <View style = {style.photo_group}>
-                            <PreviewPhoto1/>
-                            <PreviewPhoto2/>
-                            <PreviewPhoto3/>
-                            <PreviewPhoto4/>
+                            <Image
+                                source={{uri: photos[6].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15, marginBottom: 10}}
+                            />
+                            <Image
+                                source={{uri: photos[7].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15, marginBottom: 10}}
+                            />
+                            <Image
+                                source={{uri: photos[8].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15}}
+                            />
+                            <Image
+                                source={{uri: photos[9].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15}}
+                            />
                         </View>
-                    </View>
+                    </View>}
                 </View>
                 <View style = {style.album}>
                     <View style = {style.a_info}>
@@ -65,17 +95,33 @@ function AlbumList({navigation}) {
                                 >Última modificación - Hace 1 hr</Text>
                         </View>
                     </View>
+                    {
+                        photos.length != 0 &&
+                        
                     <View style = {style.album_prev}>
-                        <CoverAlbum2 style = {style.main_photo}>
-                            
-                        </CoverAlbum2>
+                        <Image
+                            source={{uri: photos[10].src.large}}
+                            style={{height: 160, width: 160, borderRadius: 15}}
+                        />
                         <View style = {style.photo_group}>
-                            <PreviewPhoto5/>
-                            <PreviewPhoto6/>
-                            <PreviewPhoto7/>
-                            <PreviewPhoto8/>
+                            <Image
+                                source={{uri: photos[11].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15, marginBottom: 10}}
+                            />
+                            <Image
+                                source={{uri: photos[12].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15, marginBottom: 10}}
+                            />
+                            <Image
+                                source={{uri: photos[13].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15}}
+                            />
+                            <Image
+                                source={{uri: photos[14].src.large}}
+                                style={{height: 75, width: 77, borderRadius: 15}}
+                            />
                         </View>
-                    </View>
+                    </View>}
                 </View>
             </ScrollView>
             <NavBar navigation={navigation}/>
